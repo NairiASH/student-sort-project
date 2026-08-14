@@ -1,4 +1,4 @@
-package com.example.student;
+package com.example.student.input;
 
 import com.example.student.input.ConsoleInput;
 import com.example.student.input.DataInput;
@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
