@@ -102,3 +102,28 @@ public class Sort {
         );
     }
 }
+
+
+// КАК ИСПОЛЬЗОВАТЬ Sort
+    //public static void main(String[] args) {
+    //    Path path = Path.of("D:\\перенести\\java\\2.txt");
+
+     //   try {
+     //       List<Student> students = Sort.loadStudents(path);
+
+     //       Sort.bubbleSort(students);
+      //      Sort.saveStudents(path, students);
+
+     //       System.out.println("Студентов: " + students.size());
+      //      System.out.println("Файл успешно отсортирован и сохранён.");
+
+       //     for (Student student : students) {
+       //         System.out.println(student);
+       //     }
+
+       // } catch (IOException e) {
+       //     System.err.println(
+       //             "Ошибка работы с файлом: " + e.getMessage()
+       //     );
+      //  }
+   // }
