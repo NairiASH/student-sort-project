@@ -50,7 +50,7 @@ public class Sort {
         return students;
     }
 
-    public static void bubbleSort(List<Student> students) {
+    public static void SortByAllFields(List<Student> students) {
         for (int i = 0; i < students.size() - 1; i++) {
             boolean swapped = false;
             
@@ -111,7 +111,7 @@ public class Sort {
      //   try {
      //       List<Student> students = Sort.loadStudents(path);
 
-     //       Sort.bubbleSort(students);
+     //       Sort.SortByAllFields(students);
       //      Sort.saveStudents(path, students);
 
      //       System.out.println("Студентов: " + students.size());
