@@ -1,5 +1,7 @@
 package com.example.student.model;
 
+import java.util.Objects;
+
 public class Student {
     private final Integer groupNumber;
     private Double scoreAverage;
@@ -9,6 +11,18 @@ public class Student {
         this.groupNumber = builder.groupNumber;
         this.scoreAverage = builder.scoreAverage;
         this.cardNumber = builder.cardNumber;
+    }
+
+    public Integer getGroupNumber() {
+        return groupNumber;
+    }
+
+    public Double getScoreAverage() {
+        return scoreAverage;
+    }
+
+    public Integer getCardNumber() {
+        return cardNumber;
     }
 
     @Override
@@ -40,4 +54,23 @@ public class Student {
         }
     }
 
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+
+        if (!(object instanceof Student otherStudent)) {
+            return false;
+        }
+
+        return Objects.equals(groupNumber, otherStudent.groupNumber)
+                && Double.compare(scoreAverage, otherStudent.scoreAverage) == 0
+                && Objects.equals(cardNumber, otherStudent.cardNumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(groupNumber, scoreAverage, cardNumber);
+    }
 }
