@@ -1,4 +1,4 @@
-package com.example.student.model;
+package com.example.student.sorting;
 
 
 import com.example.student.model.Student;
