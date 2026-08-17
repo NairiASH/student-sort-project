@@ -29,7 +29,7 @@ public class ConsoleInput implements DataInput {
         );
 
         double scoreAverage = readDouble(
-                "Введите средний балл, например 4,5: ",
+                "Введите средний балл, например 4.5: ",
                 0,
                 5
         );
