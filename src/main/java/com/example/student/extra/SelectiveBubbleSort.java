@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class SelectiveBubbleSort {
+public class SelectiveBubbleSort implements SortEvenCardNumbers {
     /**
      * Сортирует студентов с чётными номерами зачётных книжек по возрастанию.
      *
