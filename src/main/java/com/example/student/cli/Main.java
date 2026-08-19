@@ -73,22 +73,19 @@ public class  Main {
     }
 
     private static List<Student> loadFromFile() {
-        while (true) {
-//            System.out.print("Введите путь к файлу (или 'назад' для возврата): ");
-//            String input = scanner.nextLine().trim();
-
-//            if (input.equalsIgnoreCase("назад")) {
-//                System.out.println();
-//                return loadStudents();
-//            }
-
-            try {
-                DataInput fileInput = new FileInput(Path.of("resources\\student.txt"), scanner);
-                List<Student> students = fileInput.read(0);
-                System.out.println("✓ Студенты успешно загружены!\n");
-                return students;
-            } catch (Exception e) {
-                System.out.println("✗ Ошибка: " + e.getMessage() + "\n");
+        try {
+            DataInput fileInput = new FileInput(Path.of("resources\\student.txt"), scanner);
+            List<Student> students = fileInput.read(0);
+            System.out.println("✓ Студенты успешно загружены!\n");
+            return students;
+        } catch (Exception e) {
+            System.out.println("✗ Ошибка: " + e.getMessage() + "\n");
+            System.out.print("Вернуться в главное меню? (да/нет): ");
+            String response = scanner.nextLine().trim().toLowerCase();
+            if (response.equals("да") || response.equals("y")) {
+                return loadStudents();
+            } else {
+                return loadFromFile();
             }
         }
     }
